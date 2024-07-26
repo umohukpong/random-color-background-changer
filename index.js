@@ -21,9 +21,10 @@ const body = document.querySelector("body");
 const bgHexCodeSpanElement = document.querySelector("#bg-hex-code");
 
 function changeBackgroundColor() {
-  const color = darkColorsArr[getRandomIndex()];
+  const randomIndex = getRandomIndex();
+  const color = darkColorsArr[randomIndex];
 
-  bgHexCodeSpanElement.innerText = color  ;
+  bgHexCodeSpanElement.innerText = color;
   body.style.backgroundColor = color;
 }
 
@@ -39,7 +40,8 @@ btn.onclick = changeBackgroundColor;
   const randomIndex = getRandomIndex();
   body.style.backgroundColor = darkColorsArr[randomIndex];
 } */
-/* 
+
+/* // function changeBackgroundColor on set interval
 function startChangingBackgroundColor() {
   setInterval(changeBackgroundColor, 3000);
 }
